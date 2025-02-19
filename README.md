@@ -1,7 +1,8 @@
 # mortgage-rate-analyzer
+
 Analyzes historical mortgage rates to find best and worst pricing days
 
-# Mortgage Rate Analyzer
+## Mortgage Rate Analyzer
 
 This repository contains a Node.js application that analyzes historical mortgage rates to determine the best and worst days to price a loan. The project includes a `MortgageRateAnalyzer` class that processes an array of rate data (stored in `sampleRates.json`) and returns the days with the lowest and highest rates. It also includes sample data, testing setup, and documentation for easy use.
 
@@ -48,113 +49,124 @@ To set up the project locally, follow these steps:
 
    ```bash
    git clone https://github.com/yourusername/mortgage-rate-analyzer.git
-Replace yourusername and mortgage-rate-analyzer with your actual GitHub username and repository name.
+   ```
 
-Navigate to the project directory:
+2. **Navigate to the project directory**:
 
-bash
-Wrap
-Copy
-cd mortgage-rate-analyzer
-Install the dependencies:
+   ```bash
+   cd mortgage-rate-analyzer
+   ```
 
-Run the following command to install the required Node.js packages (including Jest for testing):
+3. **Install the dependencies**:
 
-bash
-Wrap
-Copy
-npm install
-This will create a node_modules folder and download dependencies listed in package.json.
+   Run the following command to install the required Node.js packages (including Jest for testing):
 
-Running the Project
-Once installed, you can run the project to analyze the sample data provided in sampleRates.json.
+   ```bash
+   npm install
+   ```
 
-Steps to Run
-Ensure you are in the project directory:
+   This will create a node_modules folder and download dependencies listed in package.json.
 
-bash
-Wrap
-Copy
-cd /path/to/mortgage-rate-analyzer
-Run the main script using Node.js:
+## Running the Project
 
-bash
-Wrap
-Copy
-node mortgageRates.js
-Alternatively, use the npm start script for convenience:
+Once installed, you can run the project to analyze the sample data provided in `sampleRates.json`.
 
-bash
-Wrap
-Copy
-npm start
-This will read the sampleRates.json file, process the data, and output the best and worst days to price a loan based on the sample rates. The output will look something like:
+### Steps to Run
 
-text
-Wrap
-Copy
+1. Ensure you are in the project directory:
+
+   ```bash
+   cd /path/to/mortgage-rate-analyzer
+   ```
+
+2. Run the main script using Node.js:
+
+   ```bash
+   node mortgageRates.js
+   ```
+
+   Alternatively, use the npm start script for convenience:
+
+   ```bash
+   npm start
+   ```
+
+This will read the `sampleRates.json` file, process the data, and output the best and worst days to price a loan based on the sample rates. The output will look something like:
+
+```
 Analysis Results: {
   bestDayToPrice: { date: '2025-02-04', rate: 3.1, reason: 'Lowest mortgage rate found' },
   worstDayToPrice: { date: '2025-02-03', rate: 3.9, reason: 'Highest mortgage rate found' }
 }
-Using Custom Data
-If you want to analyze different mortgage rate data, you can either modify sampleRates.json or provide your own data in the same format (an array of objects with date and rate properties).
+```
 
-Example of Custom Data
-Create or update a JSON file (e.g., customRates.json) with your data:
+## Using Custom Data
 
-json
-Wrap
-Copy
+If you want to analyze different mortgage rate data, you can either modify `sampleRates.json` or provide your own data in the same format (an array of objects with date and rate properties).
+
+### Example of Custom Data
+
+Create or update a JSON file (e.g., `customRates.json`) with your data:
+
+```json
 [
     { "date": "2025-03-01", "rate": 3.4 },
     { "date": "2025-03-02", "rate": 3.6 },
     { "date": "2025-03-03", "rate": 3.2 }
 ]
-Then, update mortgageRates.js to read from your custom file by changing the file path in the main function:
+```
 
-javascript
-Wrap
-Copy
+Then, update `mortgageRates.js` to read from your custom file by changing the file path in the main function:
+
+```javascript
 const data = await fs.readFile(path.join(__dirname, 'customRates.json'), 'utf8');
-Run the script again with node mortgageRates.js or npm start.
+```
 
-Testing
+Run the script again with `node mortgageRates.js` or `npm start`.
+
+## Testing
+
 The project includes tests using Jest to verify the MortgageRateAnalyzer functionality.
 
-Run Tests
+### Run Tests
+
 To execute the tests:
 
-Ensure Jest is installed (it should be after running npm install).
+1. Ensure Jest is installed (it should be after running `npm install`).
 
-Run the following command:
+2. Run the following command:
 
-bash
-Wrap
-Copy
-npm test
-This will run any test files (e.g., test.js) and report whether the tests pass or fail. The tests check that the analyzer correctly identifies the best and worst pricing days and handles edge cases.
+   ```bash
+   npm test
+   ```
 
-File Structure
-Here’s an overview of the project files:
+This will run any test files (e.g., `test.js`) and report whether the tests pass or fail. The tests check that the analyzer correctly identifies the best and worst pricing days and handles edge cases.
 
-mortgageRates.js: Main JavaScript file containing the MortgageRateAnalyzer class and example usage.
-sampleRates.json: Sample historical mortgage rate data in JSON format.
-package.json: Project configuration, including dependencies and scripts.
-test.js (optional): Test file using Jest to verify functionality.
-.gitignore: Excludes node_modules/ and other unnecessary files.
-README.md: This file, providing documentation and instructions.
-Contributing
-Contributions are welcome! If you’d like to improve this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you’d like to change.
+## File Structure
 
-License
+Here's an overview of the project files:
+
+- `mortgageRates.js`: Main JavaScript file containing the MortgageRateAnalyzer class and example usage.
+- `sampleRates.json`: Sample historical mortgage rate data in JSON format.
+- `package.json`: Project configuration, including dependencies and scripts.
+- `test.js` (optional): Test file using Jest to verify functionality.
+- `.gitignore`: Excludes node_modules/ and other unnecessary files.
+- `README.md`: This file, providing documentation and instructions.
+
+## Contributing
+
+Contributions are welcome! If you'd like to improve this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you'd like to change.
+
+## License
+
 This project is licensed under the ISC License. See the LICENSE file for details (if you want to add a license, create a LICENSE file with appropriate content).
 
-Contact
+## Contact
+
 For questions or feedback, contact the project maintainer:
 
-Name: Your Name
-Email: your.email@example.com
-GitHub: yourusername
-Feel free to open an issue on GitHub if you encounter bugs or have suggestions.
+- Name: Your Name
+- Email: your.email@example.com
+- GitHub: yourusername
 
+Feel free to open an issue on GitHub if you encounter bugs or have suggestions.
