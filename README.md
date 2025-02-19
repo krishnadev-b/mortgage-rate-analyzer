@@ -165,8 +165,8 @@ This project is licensed under the ISC License. See the LICENSE file for details
 
 For questions or feedback, contact the project maintainer:
 
-- Name: Your Name
-- Email: your.email@example.com
-- GitHub: yourusername
+- Name: Sai Krishna 
+- Email: krishnachowdary963@gmail.com
+- GitHub: krishnadev-b
 
 Feel free to open an issue on GitHub if you encounter bugs or have suggestions.
