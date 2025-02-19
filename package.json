@@ -1,0 +1,16 @@
+{
+  "name": "mortgage-rate-analyzer",
+  "version": "1.0.0",
+  "main": "mortgageRates.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node mortgageRates.js"
+  },
+  "keywords": [],
+  "author": "Krishna Dev",
+  "license": "ISC",
+  "description": "Analyzes historical mortgage rates to find best and worst pricing days",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
