@@ -91,36 +91,7 @@ Once installed, you can run the project to analyze the sample data provided in `
    npm start
    ```
 
-This will read the `sampleRates.json` file, process the data, and output the best and worst days to price a loan based on the sample rates. The output will look something like:
 
-```
-Analysis Results: {
-  bestDayToPrice: { date: '2025-02-04', rate: 3.1, reason: 'Lowest mortgage rate found' },
-  worstDayToPrice: { date: '2025-02-03', rate: 3.9, reason: 'Highest mortgage rate found' }
-}
-```
-
-## Using Custom Data
-
-If you want to analyze different mortgage rate data, you can either modify `sampleRates.json` or provide your own data in the same format (an array of objects with date and rate properties).
-
-### Example of Custom Data
-
-Create or update a JSON file (e.g., `customRates.json`) with your data:
-
-```json
-[
-    { "date": "2025-03-01", "rate": 3.4 },
-    { "date": "2025-03-02", "rate": 3.6 },
-    { "date": "2025-03-03", "rate": 3.2 }
-]
-```
-
-Then, update `mortgageRates.js` to read from your custom file by changing the file path in the main function:
-
-```javascript
-const data = await fs.readFile(path.join(__dirname, 'customRates.json'), 'utf8');
-```
 
 Run the script again with `node mortgageRates.js` or `npm start`.
 
